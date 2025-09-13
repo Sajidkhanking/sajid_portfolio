@@ -1,46 +1,50 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portfolio</title>
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    .formback {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(to right, #d53369, #daae51);
+    body {
+      font-family: 'Inter', sans-serif;  
     }
   </style>
 </head>
+<body class="bg-white">  
 
-<body class="font-[Inter]">
 
-  <!-- Header --> 
-  <header class="flex flex-col md:flex-row items-center md:items-start   
+
+
+
+ <header class="flex flex-col md:flex-row items-center md:items-start   
             justify-between p-6 bg-gradient-to-r from-white via-gray-700 to-black">
     <!-- Logo --> 
-    <img class="rounded-lg h-20 w-20 sm:w-28 md:w-32 object-cover mb-6 md:mb-0 md:mr-8" src="{% static 'assets/img/logo.png' %}" alt="Logo">
+   <img class="w-24 sm:w-32 md:w-40 h-auto object-contain rounded-lg mr-6"
+       src="assets/img/lg.png" alt="logo">
 
     <!-- Intro Text -->     
      <div class="text-center md:text-left mt-0 md:mt-[150px]">    
       <h1 class="text-2xl sm:text-3xl font-sans">Hi, I am</h1>
-      <h1 class="text-4xl sm:text-5xl font-sans">Sajid Khan</h1>
+      <h1 class="text-4xl sm:text-5xl font-sans">Sajid Khan</h1>  
       <p class="text-lg sm:text-2xl font-sans">Frontend & Backend Developer</p>
 
       <!-- Social Icons -->
-      <div class="flex justify-center md:justify-start gap-4 mt-4">
+      <div class="flex justify-center md:justify-start gap-4 mt-4">  
         <a href="https://www.linkedin.com/in/sajid-khan-48357b222/" target="_blank">
-          <img class="w-8 h-8 hover:scale-110 transition" src="{% static 'assets/img/5296501_linkedin_network_linkedin logo_icon.svg' %}" alt="LinkedIn">
+          <img class="w-8 h-8 hover:scale-110 transition" src='assets/img/5296501_linkedin_network_linkedin logo_icon.svg'  alt="LinkedIn">
         </a>
         <a href="https://www.facebook.com/?_rdr" target="_blank">
-          <img class="w-8 h-8 hover:scale-110 transition" src="{% static 'assets/img/5296500_fb_social media_facebook_facebook logo_social network_icon (1).svg' %}" alt="Facebook">
+          <img class="w-8 h-8 hover:scale-110 transition" src="assets/img/5296500_fb_social media_facebook_facebook logo_social network_icon (1).svg" alt="Facebook">
         </a>
         <a href="https://www.instagram.com/sajidkyanking/" target="_blank">
-          <img class="w-8 h-8 hover:scale-110 transition" src="{% static 'assets/img/5296765_camera_instagram_instagram logo_icon.svg' %}" alt="Instagram">
-        </a>
+          <img class="w-8 h-8 hover:scale-110 transition" src="assets/img/5296765_camera_instagram_instagram logo_icon.svg" alt="Instagram">  
+        </a>  
       </div>
     </div>
 
@@ -52,137 +56,148 @@
         <a class="text-white hover:text-gray-300" href="#projects">Services</a>
         <a class="text-white font-bold px-3 py-1 rounded-lg hover:bg-gray-200 transition" href="#formback">Contact Us</a>
       </nav>
-      <img class="w-full h-auto object-cover rounded-lg" src="{% static 'assets/img/Screenshot 2025-07-15 160758.png' %}" alt="Hero">
+     <img class="w-full max-h-[18rem] sm:max-h-[25rem] md:max-h-[32rem] object-contain rounded-lg"
+       src="assets/img/Screenshot 2025-07-15 160758.png" alt="banner">  
     </div>
   </header>
 
-  <!-- Bio -->
-  <section class="bg-black py-10 text-center px-6">
-    <h1 class="text-white mb-3 text-xl font-bold">Bio</h1>
-    <p class="text-white max-w-2xl mx-auto">
-      Passionate Python Django Developer with hands-on experience in building dynamic, secure, and user-friendly web applications.
-      Skilled in developing RESTful APIs, authentication systems, and database management, with strong expertise in integrating backend with frontend for seamless user experiences.
-    </p>
-  </section>
 
-  <!-- About -->
-  <section id="about" class="flex flex-col justify-center items-center p-6 bg-gradient-to-r from-indigo-500 to-pink-500 text-center">
-    <h1 class="mb-3 font-bold text-2xl">About Us</h1>
-    <p class="max-w-2xl">
-      Hi, I'm Sajid Khan 👋, a passionate Full-Stack & Backend Developer with a strong foundation in engineering and software development.
-      I love building web applications, experimenting with new technologies, and solving real-world problems through clean and scalable code.
-    </p>
-    <h1 class="font-bold text-2xl mt-6">Details</h1>
-    <div class="mt-4 p-6 bg-gradient-to-r from-indigo-400 to-pink-400 rounded-xl shadow-md grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
-      <pre class="text-sm sm:text-base font-bold">
+
+
+<!-- 🖊️ Bio -->
+<div class="bg-black text-center px-6 py-12">
+  <h1 class="text-white mb-3 text-xl font-bold">Bio</h1>
+  <p class="text-white max-w-2xl mx-auto">
+    Passionate Python Django Developer with hands-on experience in building dynamic, secure, and user-friendly web applications.
+    Skilled in developing RESTful APIs, authentication systems, and database management, with strong expertise in integrating backend with frontend for seamless user experiences.
+  </p>
+</div>
+
+<!-- 📍 About -->
+<div id="about" class="flex flex-col justify-center items-center p-6 bg-gradient-to-r from-indigo-500 to-pink-500">
+  <h1 class="mb-3 font-bold text-2xl">About Us</h1>
+  <p class="text-center max-w-2xl">
+    Hi, I'm Sajid Khan 👋, a passionate Full-Stack & Backend Developer with a strong foundation in engineering and software development.
+    I love building web applications, experimenting with new technologies, and solving real-world problems through clean and scalable code. 
+  </p>
+
+  <h1 class="mt-8 font-bold text-2xl">Details</h1>
+  <div class="p-6 mt-4 bg-gradient-to-r from-indigo-400 to-pink-400 rounded-xl shadow-md grid grid-cols-1 md:grid-cols-2 gap-6 text-sm md:text-base">
+    <pre class="font-bold whitespace-pre-wrap">
 Birthday: 6 Nov 2001
-Website: www.example.com 
+Website: www.example.com
 Phone: +91 9630432838
 City: Bhopal M.P
-      </pre>
-      <pre class="text-sm sm:text-base font-bold">
+    </pre>
+    <pre class="font-bold whitespace-pre-wrap">
 Age: 24
 Degree: Bachelor (B.Tech CS)
 Email: khans61101@gmail.com
 Freelance: Available
-      </pre>
+    </pre>
+  </div>
+
+  <h1 class="mt-8 font-bold text-2xl">Explore</h1>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-6 w-full max-w-5xl">
+    <div class="p-6 bg-white rounded-xl shadow-md">
+      <h1 class="font-bold text-xl mb-3">FrontEnd-Design</h1>
+      <p>Skilled Frontend Developer with expertise in HTML, CSS, Bootstrap, JavaScript, and React.</p>
     </div>
-
-    <h1 class="font-bold text-2xl mt-6">Explore</h1>
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
-      <div class="p-6 bg-white rounded-xl shadow-md">
-        <h1 class="font-bold text-xl mb-3">FrontEnd-Design</h1>
-        <p>
-          Skilled Frontend Developer with expertise in HTML, CSS, Bootstrap, JavaScript, and React.
-          Passionate about building responsive, user-friendly, and modern web interfaces with clean code and seamless user experiences.
-        </p>
-      </div>
-      <div class="p-6 bg-white rounded-xl shadow-md">
-        <h1 class="font-bold text-xl mb-3">BackEnd-Design</h1>
-        <p>
-          Skilled in backend development with <strong>Django</strong>, <strong>SQL</strong>, and <strong>REST API</strong>.
-          Experienced in designing secure authentication systems, managing scalable databases, and building robust APIs to connect frontend with backend.
-        </p>
-      </div>
+    <div class="p-6 bg-white rounded-xl shadow-md">
+      <h1 class="font-bold text-xl mb-3">BackEnd-Design</h1>
+      <p>Skilled in backend development with Django, SQL, and REST API integration.</p>
     </div>
-  </section>
+  </div>
+</div>
 
-  <!-- Skills -->
-  <section id="skills" class="p-8 bg-gradient-to-r from-blue-500 to-purple-600 text-center">
-    <h1 class="text-2xl font-bold mb-8">Skills</h1>
+<!-- 💡 Skills -->
+<div id="skills" class="p-6 bg-gradient-to-r from-blue-500 to-purple-600">
+  <h1 class="text-center font-bold text-2xl mb-8">Skills</h1>
+  <div class="flex flex-col items-center gap-10">
 
-    <!-- FrontEnd -->
-    <div>
-      <h2 class="text-xl font-bold mb-4">FrontEnd</h2>
-      <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6 place-items-center">
-        <img class="w-16 h-16" src="{% static 'assets/img/html-5.png' %}" alt="HTML">
-        <img class="w-16 h-16" src="{% static 'assets/img/CSS-Logo-2011.png' %}" alt="CSS">
-        <img class="w-16 h-16" src="{% static 'assets/img/java-script.png' %}" alt="JavaScript">
-        <img class="w-16 h-16" src="{% static 'assets/img/download.png' %}" alt="React">
-        <img class="w-16 h-16" src="{% static 'assets/img/favicon.png' %}" alt="Bootstrap">
+    <div class="text-center">
+      <h1 class="text-xl font-bold mb-4">FrontEnd</h1>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 place-items-center">
+        <img class="w-16 h-16 object-contain" src="assets/img/html-5.png" alt="HTML">
+        <img class="w-16 h-16 object-contain" src="assets/img/css.png" alt="CSS">
+        <img class="w-16 h-16 object-contain" src="assets/img/java-script.png" alt="JS">
+        <img class="w-16 h-16 object-contain" src="assets/img/images.png" alt="React">
+        <img class="w-16 h-16 object-contain" src="assets/img/favicon.png" alt="Bootstrap">
       </div>
     </div>
 
-    <!-- BackEnd -->
-    <div class="mt-10">
-      <h2 class="text-xl font-bold mb-4">BackEnd</h2>
-      <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6 place-items-center">
-        <img class="w-16 h-16" src="{% static 'assets/img/python.png' %}" alt="Python">
-        <img class="w-20 h-16" src="{% static 'assets/img/django-logo-positive.png' %}" alt="Django">
-        <img class="w-20 h-16" src="{% static 'assets/img/images (2).png' %}" alt="REST API">
-        <img class="w-20 h-16" src="{% static 'assets/img/mysql.webp' %}" alt="MySQL">
+    <div class="text-center">
+      <h1 class="text-xl font-bold mb-4">BackEnd</h1>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 place-items-center">
+        <img class="w-16 h-16 object-contain" src="assets/img/python.png" alt="Python">
+        <img class="w-16 h-16 object-contain" src="assets/img/django-logo-positive.png" alt="Django">
+        <img class="w-16 h-16 object-contain" src="assets/img/restapi.png" alt="REST API">
+        <img class="w-16 h-16 object-contain" src="assets/img/mdb.png" alt="MongoDB">
+        <img class="w-16 h-16 object-contain" src="assets/img/sql.png" alt="SQL">
       </div>
     </div>
-
     <!-- Certifications -->
     <div class="mt-10">
       <h2 class="text-xl font-bold mb-4">Certifications</h2>
       <ul>
         <li>1. Pending...</li>
         <li>2. Pending...</li>
-        <li>3. Pending...</li>
+        <li>3. Pending...</li>  
       </ul>
+    </div>  
+  </div>
+</div>
+
+ 
+
+<!-- ⚙️ Services -->
+<div id="projects" class="bg-gray-100 py-12">
+  <h1 class="text-3xl font-bold text-center mb-8">Services</h1>
+  <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
+    <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
+      <img src="assets/img/f.jpeg" class="h-40 w-full object-cover rounded mb-4">
+      <h2 class="text-xl font-semibold mb-3 text-indigo-600 text-center">Frontend Development</h2>
+      <p class="text-gray-600 text-center">Building responsive, user-friendly, and modern web interfaces.</p>
     </div>
-  </section>
-
-  <!-- Services -->
-  <section id="projects" class="bg-gray-100 py-12">
-    <h1 class="text-3xl font-bold text-center mb-8">Services</h1>
-    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
-      <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
-        <img src="{% static 'assets/img/frontEnd.jpeg' %}" class="h-40 w-full object-cover rounded mb-4" alt="">
-        <h2 class="text-xl font-semibold text-indigo-600 text-center">Frontend Development</h2>
-        <p class="text-gray-600 text-center">Building responsive, user-friendly, and modern web interfaces with HTML, CSS, Bootstrap, JavaScript, and React.</p>
-      </div>
-      <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
-        <img src="{% static 'assets/img/backend.png' %}" class="h-40 w-full object-cover rounded mb-4" alt="">
-        <h2 class="text-xl font-semibold text-green-600 text-center">Backend Development</h2>
-        <p class="text-gray-600 text-center">Developing robust APIs, authentication systems, and database management using Django, SQL, and REST API.</p>
-      </div>
-      <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
-        <img src="{% static 'assets/img/fullStack.png' %}" class="h-40 w-full object-cover rounded mb-4" alt="">
-        <h2 class="text-xl font-semibold text-purple-600 text-center">Full Stack Solutions</h2>
-        <p class="text-gray-600 text-center">Integrating frontend with backend for seamless web applications with optimized performance and security.</p>
-      </div>
+    <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
+      <img src="assets/img/b.jpeg" class="h-40 w-full object-cover rounded mb-4">
+      <h2 class="text-xl font-semibold mb-3 text-green-600 text-center">Backend Development</h2>
+      <p class="text-gray-600 text-center">Developing robust APIs, authentication systems, and databases.</p>
     </div>
-  </section>
+    <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition">
+      <img src="assets/img/full.jpeg" class="h-40 w-full object-cover rounded mb-4">
+      <h2 class="text-xl font-semibold mb-3 text-purple-600 text-center">Full Stack Solutions</h2>
+      <p class="text-gray-600 text-center">Integrating frontend with backend for seamless apps.</p>
+    </div>
+  </div>
+</div>
 
-  <!-- Contact Form -->
-  <footer id="formback" class="flex justify-center items-center bg-gradient-to-r from-pink-600 to-yellow-400 py-16 px-4">
-    <form action="" method="post" class="w-full max-w-lg bg-white p-8 rounded-2xl shadow-xl space-y-4">
-      {% csrf_token %}
-      <h1 class="text-2xl font-bold mb-4 text-center">Contact Me</h1>
+<!-- 📩 Contact -->
+<footer id="formback" class="bg-gradient-to-r from-pink-600 to-yellow-400 py-16">
+  <form onsubmit="sendMail(event)" class="max-w-lg mx-auto bg-white p-8 rounded-2xl shadow-xl space-y-4">
+    <h1 class="text-2xl font-bold mb-4 text-center">Contact Me</h1>
+    <input name="name" placeholder="Enter Name" class="w-full border rounded-lg p-3" required>
+    <input type="email" name="email" placeholder="Enter Email" class="w-full border rounded-lg p-3" required>
+    <input type="tel" name="number" placeholder="Enter Number" pattern="[0-9]{10}" class="w-full border rounded-lg p-3" required>
+    <textarea name="details" placeholder="Enter Message" class="w-full border rounded-lg p-3 h-24 resize-none" required></textarea>
+    <button type="submit" class="w-full bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 transition">Send</button>
+  </form>
+</footer>
 
-      <input type="text" id="name" name="name" placeholder="Enter Name" class="w-full border-2 border-gray-300 rounded-lg p-3 text-gray-700 focus:ring-2 focus:ring-blue-400 focus:outline-none" required>
-      <input type="email" id="email" name="email" placeholder="Enter Email" class="w-full border-2 border-gray-300 rounded-lg p-3 text-gray-700 focus:ring-2 focus:ring-blue-400 focus:outline-none" required>
-      <input type="tel" id="number" name="number" placeholder="Enter Number" pattern="[0-9]{10}" class="w-full border-2 border-gray-300 rounded-lg p-3 text-gray-700 focus:ring-2 focus:ring-blue-400 focus:outline-none" required>
-      <textarea id="details" name="details" placeholder="Enter Message" class="w-full border-2 border-gray-300 rounded-lg p-3 text-gray-700 h-24 resize-none focus:ring-2 focus:ring-blue-400 focus:outline-none"></textarea>
+<!-- 📧 EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script>
+(function(){
+  emailjs.init("syhNRRzA2CVjQeLf5");
+})();
+function sendMail(e){
+  e.preventDefault();
+  emailjs.sendForm("service_5q968kj","template_yrmantx",e.target)
+  .then(()=>alert("✅ Message Sent!"),err=>alert("❌ Error:"+JSON.stringify(err)));
+}
+</script>
 
-      <button type="submit" class="w-full bg-blue-500 text-white py-3 rounded-lg font-semibold hover:bg-blue-600 transition duration-300 shadow-md">Send</button>
-    </form>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-</body> 
+</body>  
 </html>
+  
 
